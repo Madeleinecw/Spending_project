@@ -1,3 +1,6 @@
+Ensure Postgres and Flask are installed. in command line enter Flask run and go to http://127.0.0.1:5000/ in browser to view.
+
+
 Spending tracker brief:
 
 Spending Tracker
