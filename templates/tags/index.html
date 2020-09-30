@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Tags</h2>
+<h3></h3>
+<div class="tag_container">
+    {% for tag in tags %}
+    <section class="tag_section">
+        <div class="tag">
+            <p>{{ tag.name }}</p>
+            <div class="links"> <a href="/tags/{{ tag.id }}/edit">EDIT</a></div>
+        </div>
+    </section>
+    {% endfor %}
+</div>
+
+<div class="links"><a href="/tags/new">New Tag</button></div>
+{% endblock %}

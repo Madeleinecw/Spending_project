@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Transactions</h2>
+
+Your household has tracked a total of £{{total}}!
+<div>
+    {% for transaction in transactions %}
+    <section class="transactions_tagged">
+        <p> £{{ transaction.amount }} was spent at {{ transaction.merchant.name }} for {{transaction.tag.name}} by {{transaction.user.name}}</p>
+        <div class="links"><a href="/transactions/{{transaction.id}}/edit">EDIT</a></div>
+        <form action="/transactions/{{ transaction.id }}/delete" method="POST">
+            <input type="submit" value="DELETE">
+    </section>
+    {% endfor %}
+</div>
+
+{% endblock %}

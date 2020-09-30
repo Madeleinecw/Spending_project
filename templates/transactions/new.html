@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+
+<form action="/transactions/create" method="post" class="transaction_new">
+    <div>
+        <label for="amount">Amount:</label>
+        <input type="amountz" id="amount" name="amount" value="">
+    </div>
+    <div>
+        <label for="merchant">Merchant:</label>
+        <select id="merchant" name="merchant">
+            <option value = "" selected disabled> </option>
+        {% for merchant in merchants %}
+            <option value = {{merchant.id}}> {{ merchant.name }} </option>
+        {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="user">Confirm User:</label>
+        <select id="user" name="user">
+        {% for user in users %}
+            <option value = {{user.id}}> {{ user.name }} </option>
+        {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="tags">Tag:</label>
+
+        <select id="tag" name="tag">
+            <option value = "" selected></option>
+            {% for tag in tags %}
+                <option value = {{tag.id}}> {{ tag.name }} </option>
+            {% endfor %}
+        </select>
+
+    </div>
+    <button type="submit">Add Transaction</button>
+</form>
+{% endblock %}

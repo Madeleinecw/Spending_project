@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<div class="user_dashboard">
+    <h2>Welcome back, {{ user.name }}! </h2>
+
+    So far we have tracked £{{ total }}, since you started tracking with us. Your budget is currently set at £{{user.budget}}.
+    <div>{% if total >= user.budget %} You have reached your total budget! Slow your spending! {% endif %}</div>
+    <p>
+        <div class="links"><a href="/transactions/new">ADD NEW</a></div>
+    </p>
+    <div class="trasactions_list">
+        <p>Most recent transactions:</p>
+
+        {% for transaction in transactions %}
+
+        <div class="transactions_tagged">
+            £{{ transaction.amount }} spent at {{ transaction.merchant.name }} on {{ transaction.tag.name }}
+            <div class="links"> <a href="/transactions/{{ transaction.id }}">EDIT</a></div>
+        </div>
+
+        {% endfor %} {% endblock %}
+    </div>
+</div>

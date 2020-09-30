@@ -1,0 +1,6 @@
+{% extends 'base.html' %} {% block content %}
+<h3> Current total Household Budget is {{budget_total}}</h3>
+{% for user in users %}
+<div class="transactions_tagged">
+    <h4>{{ user.name }}'s current budget is set at £{{user.budget}} </h4>
+    <div class="links"><a href="/budgets/{{user.id}}/edit">EDIT</a> </div>{% endfor %} {% endblock %}

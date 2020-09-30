@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="/transactions/{{transaction.id}}/edit" method="post" class="transaction_edit">
+    <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" value="{{transaction.amount}}" required autofocus>
+    </div>
+    <div>
+        <label for="merchant">Merchant:</label>
+        <select id="merchant" name="merchant">
+        {% for merchant in merchants %}
+            <option value = {{merchant.id}} {% if merchant.id == transaction.merchant.id %} selected {% endif %}> {{ merchant.name }} </option>
+        {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="tags">Tag:</label>
+
+        <select id="tag" name="tag">
+            {% for tag in tags %}
+                <option value = {{tag.id}} {% if tag.id == transaction.tag.id %}
+                    selected
+                {% endif %}> {{ tag.name }} </option>
+            {% endfor %}
+        </select>
+
+    </div>
+    <button type="submit">Update Transaction</button>
+</form>
+{% endblock %}

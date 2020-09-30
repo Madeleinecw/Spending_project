@@ -1,0 +1,240 @@
+.menu_container {
+    background-color: #14233C;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: large;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body>h2 {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    min-width: 696px;
+    margin: 0;
+    letter-spacing: 0.1em;
+    border-bottom: #B9648C 3px solid;
+}
+
+.menu_links {
+    color: white;
+    text-decoration: none;
+    /* float: left; */
+    align-items: center;
+    padding: 20px;
+    display: flex;
+}
+
+.menu_links>a {
+    text-decoration: none;
+    color: #FAFAFA;
+    transition: 0.5s;
+}
+
+.menu_links>a:hover {
+    color: #B9648C;
+}
+
+body {
+    margin: 0;
+}
+
+body>main {
+    margin-left: 30px
+}
+
+.merchant_container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.merchant_section {
+    flex: 20%;
+    padding: 10px;
+}
+
+.merchant {
+    width: 200px;
+    border: #B9648C 3px solid;
+    text-align: center;
+    color: #FAFAFA;
+    font-weight: bold;
+    background-color: #2e2532;
+}
+
+.merchant>a {
+    text-decoration: none;
+    color: #FAFAFA;
+    justify-content: space-between;
+}
+
+.tag_container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tag_section {
+    flex: 20%;
+    padding: 10px;
+}
+
+.tag {
+    width: 200px;
+    border: #B9648C 3px solid;
+    text-align: center;
+    color: #FAFAFA;
+    font-weight: bold;
+    background-color: #2e2532;
+}
+
+.tag>a {
+    text-decoration: none;
+    color: #FAFAFA;
+    justify-content: space-between;
+}
+
+.transaction_edit>div {
+    align-items: center;
+    margin: 20px;
+}
+
+.user_dashboard>transactions_list {
+    text-decoration: none;
+    margin-left: 40px
+}
+
+.dropbtn {
+    background-color: #14233C;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    transition: 0.5s;
+    align-items: center;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    font-size: large;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #14233C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+}
+
+.dropdown-content a:hover {
+    color: #B9648C;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #B9648C;
+}
+
+.select_user {
+    padding: 20px
+}
+
+input {
+    background-color: #14233C;
+    color: white;
+}
+
+.links {
+    background-color: #14233C;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    transition: 0.5s;
+    margin: 10px;
+    text-decoration: none;
+    padding: 7px;
+}
+
+.links>a {
+    text-decoration: none;
+    color: white;
+}
+
+.links>a:hover {
+    color: #B9648C;
+}
+
+.transactions_list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.transactions_tagged {
+    font-family: Helvetica, Arial, sans-serif;
+    border: #B9648C 1px solid;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+.transactions_merchant {
+    border: #B9648C 1px solid;
+    margin: 10px
+}
+
+form {
+    margin: 10px;
+}
+
+input {
+    margin: 10px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    border: none;
+    font-size: large;
+    margin: 10px;
+}
+
+input:hover {
+    color: #B9648C;
+}
+
+button {
+    background-color: #14233C;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+button:hover {
+    color: #B9648C;
+}

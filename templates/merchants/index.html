@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Merchants</h2>
+<div class="links"><a href="/merchants/new">New Merchant</a></div>
+<div class="merchant_container">
+    {% for merchant in merchants %}
+    <section class="merchant_section">
+        <div class="merchant">
+            <p>{{ merchant.name }}</p>
+            <div class="links"><a href="/merchants/{{ merchant.id }}/edit">VIEW</a></div>
+        </div>
+    </section>
+    {% endfor %}
+</div>
+{% endblock %}
